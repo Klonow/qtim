@@ -1,0 +1,61 @@
+@mixin f-size($size: m, $weight: 400) {
+  font-weight: $weight;
+
+  @if $size == xxxl {
+    font-size: 11.2rem;
+  }
+
+  @if $size == xl {
+    font-size: 3.6rem;
+  }
+
+  @if $size == l {
+    font-size: 3.2rem;
+  }
+
+  @if $size == m {
+    font-size: 2rem;
+  }
+
+  @if $size == s {
+    font-size: 1.6rem;
+  }
+}
+
+@mixin line-height($size: m) {
+  @if $size == xxxl {
+    line-height: 11.2rem;
+  }
+
+  @if $size == xl {
+    line-height: 4.464rem;
+  }
+
+  @if $size == l {
+    line-height: 3.2rem;
+  }
+
+  @if $size == sm {
+    line-height: 2.4rem;
+  }
+
+  @if $size == m {
+    line-height: 2rem;
+  }
+
+  @if $size == s {
+    line-height: 1.92rem;
+  }
+
+  @if $size == xs {
+    line-height: 1.6rem;
+  }
+}
+
+@mixin truncate($lines: 1) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
